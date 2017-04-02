@@ -103,7 +103,7 @@ class KeyEvent(object):
     def __str__(self):
         try:
             ks = ('up', 'down', 'hold')[self.keystate]
-        except IndexError:
+        except IndexError, AttributeError:
             ks = 'unknown'
 
         msg = 'key event at {:f}, {} ({}), {}'
